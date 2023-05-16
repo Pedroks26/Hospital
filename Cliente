@@ -1,0 +1,72 @@
+public class Cliente {
+    private int idade;
+    private String nome;
+    private String nomeDoenca;
+    private int tempoDoente;
+    
+//Construtores
+    public Cliente(int idade,String nome, String nomeDoenca, int tempoDoente){
+        this.idade = idade;
+        this.nome= nome;
+        this.nomeDoenca = nomeDoenca;
+        this.tempoDoente = tempoDoente;
+    }
+
+//Getter e Setter   
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public int getIdade(){
+        return idade;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNomeDoenca(String nomeDoenca){
+        this.nomeDoenca=nomeDoenca;
+    }
+    public String getNomeDoenca(){
+        return nomeDoenca;
+    }
+
+    public void settempoDoente(int tempoDoente) {
+        this.tempoDoente = tempoDoente;
+    }
+    public int gettempoDoente(){
+        return tempoDoente;
+    }
+    
+//Separador de idade
+    public void imprimirSeparar(){
+        if(this.idade<18){
+          System.out.println("Você está no grupo das crianças");
+        }
+        if(this.idade>=18 && this.idade<= 60){
+          System.out.println("Você está no grupo dos adultos");
+        }
+       if(this.idade>=60){
+          System.out.println("Você está no grupo dos idosos");
+       }
+    }
+
+//Separador de Doença
+    public void imprimirSepararDoenca(){
+        if(this.tempoDoente<4){  
+          System.out.println("Você está no grupo das doenças rápidas");
+          System.out.println("Se dirija até a sala 1 ");
+        }
+        if(this.tempoDoente>=4 && this.tempoDoente<=7){
+            System.out.println("Você está no grupo dos moderados");
+            System.out.println("Se dirija até a sala 2 ");
+        }
+        if(this.tempoDoente>7){
+            System.out.println("Você está no grupo do alerta");
+            System.out.println("Se dirija até a sala 3 ");
+        }
+    } 
+}
